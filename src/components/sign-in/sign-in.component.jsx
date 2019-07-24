@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import './sign-in.styles.scss';
 import FormInput from '../form-input/form-input.component';
+import CustomButton from '../custom-button/custom-button.component';
 
 const SignIn = props => {
   const [email, setEmail] = useState('');
@@ -36,7 +37,7 @@ const SignIn = props => {
           label="password"
           required
         />
-        <input type="submit" value="Submit Form" />
+        <CustomButton type="submit"> Sign in </CustomButton>
       </form>
     </div>
   );
