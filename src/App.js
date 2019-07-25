@@ -35,8 +35,6 @@ const App = () => {
     };
   }, []);
 
-  console.log(currentUser);
-
   return (
     <div className="App">
       <Header currentUser={currentUser} />
