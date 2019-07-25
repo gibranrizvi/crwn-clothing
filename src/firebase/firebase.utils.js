@@ -12,6 +12,7 @@ const config = {
   appId: '1:950641682731:web:f374d6322e08231f'
 };
 
+// Saving new user or updating existing user in Firestore
 export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;
 
@@ -50,14 +51,19 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   return userRef;
 };
 
+// Initialize Firebase
 firebase.initializeApp(config);
 
+// Export Auth and Firestore services
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
+// Google OAuth set up
 const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({ prompt: 'select_account' });
 
+// Export signInWithGoogle method
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
 
+// Firebase default export
 export default firebase;
