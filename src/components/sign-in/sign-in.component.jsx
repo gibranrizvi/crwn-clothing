@@ -28,7 +28,7 @@ const SignIn = props => {
           type="email"
           onChange={event => setEmail(event.target.value)}
           value={email}
-          label="email"
+          label="Email"
           required
         />
         <FormInput
@@ -36,14 +36,14 @@ const SignIn = props => {
           type="password"
           onChange={event => setPassword(event.target.value)}
           value={password}
-          label="password"
+          label="Password"
           required
         />
         <div className="buttons">
-          <CustomButton type="submit"> Sign in </CustomButton>
+          <CustomButton type="submit"> SIGN IN </CustomButton>
           <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
             {' '}
-            Sign in with Google{' '}
+            SIGN IN WITH GOOGLE{' '}
           </CustomButton>
         </div>
       </form>
